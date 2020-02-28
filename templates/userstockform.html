@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Stock App Demo</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1>Stock App Demo</h1>
+		<p>This web app displays stock price data over the last month from the <a href="https://www.quandl.com/data/WIKI">Quandle WIKI database</a>.</p>
+		<p>Please enter a company's stock ticker symbol (e.g., AAPL for Apple, Inc.) and select which types of price data to display.</p>
+		<form class="form-horizontal" id='userstockform' method='post' action='results'>
+			<div class="form-group">
+				<label for="tickersymbol" class="control-label col-xs-2">Ticker symbol:</label>
+				<div class="col-xs-10">
+					<input type='text' class="form-control" placeholder="e.g., AAPL" name='tickersymbol' />
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="tickersymbol" class="control-label col-xs-2">Data:</label>
+				<div class="col-xs-10">
+					<div class="checkbox">
+						<label><input type='checkbox' name='openingprice' /> Opening price</label>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<label><input type='checkbox' name='adjopeningprice' /> Adjusted opening price</label>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<label><input type='checkbox' name='closingprice' checked /> Closing price</label>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<label><input type='checkbox' name='adjclosingprice' /> Adjusted closing price</label>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-xs-offset-2 col-xs-10">
+					<input type='submit' value='Submit' class="btn btn-success" />
+				</div>
+			</div>
+		</form>
+		<hr>
+		<div class="row">
+			<div class="col-xs-12"
+				<footer>
+					<p>Created by <a href="https://www.jayqi.com">Jay Qi</a>. Source code available on <a href="https://github.com/jayqi/stock-app-flask-demo">GitHub</a>.</p>
+				</footer>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

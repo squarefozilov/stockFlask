@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Stock App Demo: Results for {{name}}</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<link
+    	href="https://cdn.pydata.org/bokeh/release/bokeh-0.11.1.min.css"
+    	rel="stylesheet" type="text/css">
+		<script src="https://cdn.pydata.org/bokeh/release/bokeh-0.11.1.min.js"></script>
+		{{ script | safe }}
+	</head>
+	<body>
+		<div class="container">
+			<h1>Stock App Demo</h1>
+			<h2>Results for {{name}}</h2>
+			<p>{{ div | safe }}</p>
+			<p>Data source: <a href="https://www.quandl.com/data/WIKI/{{tickersymbol}}">https://www.quandl.com/data/WIKI/{{tickersymbol}}</a></p>
+			<a href="/" class="btn btn-primary">Go back</a>
+			<hr>
+			<div class="row">
+				<div class="col-xs-12"
+					<footer>
+						<p>Created by <a href="https://www.jayqi.com">Jay Qi</a>. Source code available on <a href="https://github.com/jayqi/stock-app-flask-demo">GitHub</a>.</p>
+					</footer>
+				</div>
+			</div>
+		</div>
+	</body>
+	</html>
